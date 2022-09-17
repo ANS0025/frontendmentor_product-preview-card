@@ -8,7 +8,7 @@ body{
     height: 100vh;
 }
 
-#card{
+main{
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -24,7 +24,7 @@ body{
   }
 
 /* テキスト全般 */
-#profile{
+section{
     display: flex;
     flex-direction: column;
     justify-content: center;
