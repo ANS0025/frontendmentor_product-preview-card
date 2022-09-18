@@ -8,20 +8,25 @@ body{
     height: 100vh;
 }
 
+/* カード */
 main{
     display: flex;
     flex-direction: row;
-    gap: 25px;
-    width: 560px;
-    aspect-ratio: 4 / 3;
-    border-radius: 8px;
+    gap: 32px;
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
     background-color: #ffff;
 }
-/* カード */
-#main-img {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+/* メイン画像 */
+#main-img-pc {
+    display: block !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
+#main-img-sp{
+    display: none !important;
+}
 
 /* テキスト全般 */
 section{
@@ -29,7 +34,8 @@ section{
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    font-size: 14px;
+    font-weight: 500px;
+    font-size: 12px;
     font-family: 'Montserrat';
 }
 
@@ -37,27 +43,41 @@ section{
 #category{
     padding-top: 12px;
     color: hsl(228, 12%, 48%);
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 /* 商品名 */
-#product{
+#product-pc{
+    display: block !important;
+    margin-top: 4px;
+    color: #1C232B;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 32px;
     font-family: 'Fraunces';
+    line-height: 32px;
+}
+#product-sp{
+    display: none !important;
 }
 
 /* 詳細文 */
-#desc{
+#desc-pc{
+    display: block !important;
     color: hsl(228, 12%, 48%);
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 23px;
+}
+#desc-sp{
+    display: none !important;
 }
 
 /* 値段 */
 #price{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     align-items: center;
     font-family: 'Fraunces', serif;
 }
@@ -65,25 +85,137 @@ section{
 #discount-price{
     color: hsl(158, 36%, 37%);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 #initial-price{
     color: hsl(228, 12%, 48%);
+    font-size: 13px;
     text-decoration: line-through;
 }
 
 /* ボタン */
 button{
-    width: 240px;
-    height: 50px;
+    width: 236px;
+    height: 48px;
     border: none;
+    margin-bottom: 10px;
     background-color: hsl(158, 36%, 37%);
     color: #ffff;
     border-radius: 8px;
     font-weight: 500;
+    font-size: 14px;
     transition: .2s;
 }
 button:hover{
-    background-color: hsl(158, 37%, 24%);
+    background-color: #1A4032;
+    cursor: pointer;
+}
+
+/* モバイル版 (mobile version)
+--------------------------------------------------------- */
+@media (max-width: 600px){
+    /* カード */
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 343px;
+        height: 611px;
+        border-radius: 10px;
+        background-color: #ffff;
+    }
+    /* メイン画像 */
+    #main-img-pc {
+        display: none !important;
+      }
+    #main-img-sp{
+        display: block !important;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+/* テキスト全般 */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 24px;
+    gap: 10px;
+    font-weight: 500px;
+    font-size: 12px;
+    font-family: 'Montserrat';
+}
+
+/* カテゴリ名 */
+#category{
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+}
+
+/* 商品名 */
+#product-pc{
+    display: none !important;
+}
+#product-sp{
+    display: block !important;
+    margin-top: 2px;
+    color: #1C232B;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Fraunces';
+    line-height: 32px;
+}
+
+/* 詳細文 */
+#desc-pc{
+    display: none !important;
+}
+#desc-sp{
+    display: block !important;
+    margin-top: 4px;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    line-height: 23px;
+}
+
+/* 値段 */
+#price{
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    margin-top: 14px;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+}
+
+#discount-price{
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+#initial-price{
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+/* ボタン */
+button{
+    width: 295px;
+    height: 48px;
+    border: none;
+    margin-bottom: 24px;
+    background-color: hsl(158, 36%, 37%);
+    color: #ffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .2s;
+}
+button:hover{
+    background-color: #1A4032;
+    cursor: pointer;
+}
 }
