@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>product-preview-card-component</title>
         <meta name="description" content="product-preview-card-component">
         <link rel="stylesheet" href="reset.css">
@@ -12,20 +13,31 @@
     </head>
     <body>
         <main>
-            <img id="main-img" src="images/image-product-desktop.jpg" alt="">
+            <img id="main-img-pc" src="images/image-product-desktop.jpg" alt="">
+            <img id="main-img-sp" src="images/image-product-mobile.jpg" alt="">
             <section>
                 <div id="category">PERFUME</div><!--カテゴリ名-->
-                <div id="product">
+                <div id="product-pc">
                     Gabrielle<br>
                     Essence Eau<br>
                     De Parfum
-                </div> <!--商品名-->
-                <div id="desc">
+                </div> <!--商品名PC向け-->
+                <div id="product-sp">
+                    Gabrielle Essence <br>
+                    Eau De Parfum
+                </div> <!--商品名SP向け-->
+                <div id="desc-pc">
                     A floral, solar and voluptious<br>
                     interpretation composed by<br>
                     Olivier Polge, Perfumer-Creator<br>
                     for the House of CHANEL.
-                </div><!--詳細-->
+                </div><!--詳細文PC向け-->
+                <div id="desc-sp">
+                    A floral, solar and voluptious<br>
+                    interpretation composed by Olivier<br>
+                    Polge, Perfumer-Creator for the House of<br>
+                    CHANEL.
+                </div><!--詳細文SP向け-->
                 <div id="price">
                     <div id="discount-price">$149.99</div>
                     <div id="initial-price">$169.99</div>
