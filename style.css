@@ -1,221 +1,171 @@
-@charset "UTF-8";
-
 body{
-    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: flex;
     height: 100vh;
+    background: #0A0C1C;
 }
-
-/* カード */
 main{
     display: flex;
     flex-direction: row;
-    gap: 32px;
-    width: 600px;
-    height: 450px;
-    border-radius: 10px;
-    background-color: #ffff;
+    width: 69.375rem;
+    height: 27.875rem;
+    background: #1B1937;
+    box-shadow: 0rem 1.25rem 1.25rem -0.625rem rgba(23, 25, 41, 0.203087);
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
-/* メイン画像 */
-#main-img-pc {
-    display: block !important;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-#main-img-sp{
-    display: none !important;
-}
-
-/* テキスト全般 */
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 500px;
-    font-size: 12px;
-    font-family: 'Montserrat';
-}
-
-/* カテゴリ名 */
-#category{
-    padding-top: 12px;
-    color: hsl(228, 12%, 48%);
-    letter-spacing: 5px;
-}
-
-/* 商品名 */
-#product-pc{
-    display: block !important;
-    margin-top: 4px;
-    color: #1C232B;
+/* メインテキスト */
+/* ヘッダー */
+h1{
+    width: 25.25rem;
+    margin-top: 4.4375rem;
+    margin-right: 5.9375rem;
+    margin-left: 4.4688rem;
+    color: #FFFFFF;
     font-weight: 700;
-    font-size: 32px;
-    font-family: 'Fraunces';
-    line-height: 32px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: 'Inter';
 }
-#product-sp{
-    display: none !important;
+h1 emphasis{
+    color: #AB5CDB;
 }
-
-/* 詳細文 */
-#desc-pc{
-    display: block !important;
-    color: hsl(228, 12%, 48%);
-    font-size: 14px;
-    line-height: 23px;
+/* 説明 */
+p{
+    width: 23.375rem;
+    margin-top: 1.5625rem;
+    margin-left: 4.4688rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    opacity: 0.75;
+    font-family: 'Inter', sans-serif;
 }
-#desc-sp{
-    display: none !important;
-}
-
-/* 値段 */
-#price{
+/* 詳細情報 */
+info{
     display: flex;
     flex-direction: row;
-    gap: 19px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-    font-family: 'Fraunces', serif;
+    margin-top: 4.5rem;
+    margin-left: 4.4688rem;
+    color: #FFFFFF;
 }
-
-#discount-price{
-    color: hsl(158, 36%, 37%);
+info num{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+info name{
+    margin-top: 0.125rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.0625rem;
+    opacity: 0.6;
+    font-family: 'Lexend Deca', sans-serif;
+}
+#company{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3.9375rem;
+}
+#templates{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3.75rem;
+}
+#queries{
+    display: flex;
+    flex-direction: column;
+}
+/* イメージ画像 */
+.pic{
+    background-color: #AB5CDB;
+}
+#hero-pc{
+    display: block;
+    opacity: 0.7;
+}
+#hero-sp{
+    display: none;
 }
 
-#initial-price{
-    color: hsl(228, 12%, 48%);
-    font-size: 13px;
-    text-decoration: line-through;
-}
 
-/* ボタン */
-button{
-    width: 236px;
-    height: 48px;
-    border: none;
-    margin-bottom: 10px;
-    background-color: hsl(158, 36%, 37%);
-    color: #ffff;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 14px;
-    transition: .2s;
-}
-button:hover{
-    background-color: #1A4032;
-    cursor: pointer;
-}
-
-/* モバイル版 (mobile version)
---------------------------------------------------------- */
-@media (max-width: 600px){
-    /* カード */
+/* SP版
+-------------------------------------------------------------------------------- */
+@media (max-width: 47.9375rem){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #0A0C1C;
+    }
     main{
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        width: 343px;
-        height: 611px;
-        border-radius: 10px;
-        background-color: #ffff;
+        width: 20.4375rem;
+        height: 48.75rem;
+    }
+    /* メインテキスト */
+    h1{
+        width: 16.5rem;
+        margin-top: 2.5rem;
+        margin-left: 1.9375rem;
+        font-size: 1.75rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    p{
+        width: 16.5rem;
+        margin-top: 1rem;
+        margin-left: 1.9375rem;
+        font-size: 0.9375rem;
+        line-height: 1.5625rem;
+        text-align: center;
+    }
+    /* 詳細情報 */
+    info{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        margin-left: 0rem;
+        text-align: center;
+    }
+    info num{
+        font-weight: 700;
+        font-size: 1.5rem;
+        font-family: 'Inter', sans-serif;
+    }
+    info name{
+        margin-top: 0.125rem;
+        font-weight: 400;
+        font-size: 0.75rem;
+        letter-spacing: 0.0625rem;
+        opacity: 0.6;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    #company{
+        margin-right: 0rem;
+    }
+    #templates{
+        margin-right: 0rem;
     }
     /* メイン画像 */
-    #main-img-pc {
-        display: none !important;
-      }
-    #main-img-sp{
-        display: block !important;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+    .pic{
+        background-color: #AB5CDB;
     }
-    
-/* テキスト全般 */
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 24px;
-    gap: 10px;
-    font-weight: 500px;
-    font-size: 12px;
-    font-family: 'Montserrat';
-}
-
-/* カテゴリ名 */
-#category{
-    color: hsl(228, 12%, 48%);
-    letter-spacing: 5px;
-}
-
-/* 商品名 */
-#product-pc{
-    display: none !important;
-}
-#product-sp{
-    display: block !important;
-    margin-top: 2px;
-    color: #1C232B;
-    font-weight: 700;
-    font-size: 32px;
-    font-family: 'Fraunces';
-    line-height: 32px;
-}
-
-/* 詳細文 */
-#desc-pc{
-    display: none !important;
-}
-#desc-sp{
-    display: block !important;
-    margin-top: 4px;
-    color: hsl(228, 12%, 48%);
-    font-size: 14px;
-    line-height: 23px;
-}
-
-/* 値段 */
-#price{
-    display: flex;
-    flex-direction: row;
-    gap: 19px;
-    margin-top: 14px;
-    align-items: center;
-    font-family: 'Fraunces', serif;
-}
-
-#discount-price{
-    color: hsl(158, 36%, 37%);
-    font-weight: 700;
-    font-size: 32px;
-}
-
-#initial-price{
-    color: hsl(228, 12%, 48%);
-    font-size: 13px;
-    text-decoration: line-through;
-}
-
-/* ボタン */
-button{
-    width: 295px;
-    height: 48px;
-    border: none;
-    margin-bottom: 24px;
-    background-color: hsl(158, 36%, 37%);
-    color: #ffff;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 14px;
-    transition: .2s;
-}
-button:hover{
-    background-color: #1A4032;
-    cursor: pointer;
-}
+    #hero-pc{
+        display: none;
+        opacity: 0.7;
+    }
+    #hero-sp{
+        display: block;
+        width: 20.4375rem;
+        height: 15rem;
+        opacity: 0.7;
+    }
 }
